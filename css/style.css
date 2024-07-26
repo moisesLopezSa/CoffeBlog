@@ -1,0 +1,424 @@
+/*PROPERTIES PALETTE*/
+:root {
+  /*Project's colors*/
+  --mainColor: #784d3c;
+  /*Basic colors*/
+  --white: #ffffff;
+  --black: #000000;
+  /*Project's fonts*/
+  --headingFont: "PT Seans", sans-serif;
+  --mainFont: "Open Seans", sans-serif;
+}
+
+/*GLOBALS*/
+html {
+  /*Apply a natural box layout model to all elements*/
+  box-sizing: border-box;
+  /*1 rem = 10 px*/
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--mainFont);
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+a {
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+/*HEADER FONTS' PROPERTIES*/
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  font-family: var(--headingFont);
+}
+
+/* ----->>>>> FOR ALL PAGES <<<<<----- */
+
+/* >>>>> HEADER <<<<< */
+
+/* HEADER MOBIL */
+.header {
+  height: 60rem;
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* HEADER BAR MOBIL */
+.header__bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  margin: 0 5%;
+}
+
+.header__bar--logo {
+  font-weight: normal;
+  color: var(--white);
+}
+
+.header__bar--logoBold {
+  font-weight: bold;
+}
+
+/* NAVIGATION BAR MOBIL */
+.header__bar--navBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__bar--link {
+  color: var(--white);
+}
+
+/* HEADER BAR TABLET */
+@media (min-width: 768px) {
+  .header__bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__bar--navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+/* HEADER TITLE */
+.header__title {
+  margin: 1rem 5% 0 5%;
+  color: var(--white);
+}
+
+.header__title--text {
+  margin: 0rem 5%;
+  text-align: center;
+  color: var(--white);
+}
+
+/* >>>>> FOOTER <<<<< */
+
+/* FOOTER */
+.footer {
+  background-color: #000000;
+}
+
+/* FOOTER BAR MOBIL */
+.footer__bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10%;
+}
+
+.footer__bar--logo {
+  font-weight: normal;
+  color: var(--white);
+  margin: .5rem;
+}
+
+.footer__bar--logoBold {
+  font-weight: bold;
+}
+
+/* FOOTER BAR MOBIL */
+.footer__bar--navBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.footer__bar--link {
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+/* FOOTER BAR TABLET */
+@media (min-width: 768px) {
+  .footer__bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .footer__bar--navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+/* ----->>>>> INDEX US PAGES <<<<<----- */
+
+/* INDEX MOBIL */
+.main {
+  margin: 0 5%;
+}
+
+.blog__article {
+  border-bottom: .1rem solid var(--black);
+  margin-bottom: 2rem;
+}
+
+.blog__article:last-of-type {
+  border: 0;
+  margin-bottom: 2rem;
+}
+
+.blog__article--img {
+  width: 100%;
+  height: auto;
+}
+
+.blog__article--info {
+  text-align: justify;
+}
+
+.blog__article--boton {
+  display: block;
+  background-color: var(--black);
+  padding: 1rem 3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--white);
+}
+
+.sideBar__course {
+  border-bottom: .1rem solid var(--black);
+}
+
+.sideBar__course:last-of-type {
+  border: 0;
+  margin-bottom: 2rem;
+}
+
+.sideBar__course--title {
+  text-align: left;
+}
+
+.sideBar__course--label {
+  font-weight: bold;
+}
+
+.sideBar__course--price {
+  font-weight: normal;
+}
+
+.sideBar__course--boton {
+  display: block;
+  background-color: var(--mainColor);
+  padding: 1rem 3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--white);
+}
+
+/* INDEX TABLET */
+@media (min-width: 768px) {
+  .sideBar__course--boton {
+    text-align: left;
+    width: 50%;
+  }
+}
+
+/* INDEX LAPTOP */
+@media (min-width: 1024px) {
+  .main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin: 0 10%;
+  }
+  .blog__article--title {
+    text-align: left;
+  }
+
+  .blog__article--boton {
+    width: 50%;
+  }
+
+  .sideBar__course--boton {
+    width: 50%;
+  }
+}
+
+/* ----->>>>> ABAOUT US PAGES <<<<<----- */
+
+/* ABAOUT US MOBIL */
+.abaoutUS__section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+}
+
+.abaoutUS__section--img {
+  width: 100%;
+  height: auto;
+}
+
+.abaoutUS__section--info {
+  text-align: justify;
+}
+
+/* ABAOUT US LAPTOP */
+@media (min-width: 1024px) {
+  .abaoutUS__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 4rem ;
+  }
+
+  .abaoutUS__section--info {
+    margin-top: 0;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+}
+
+/* ----->>>>> COURSE PAGES <<<<<----- */
+
+/* COURSE MOBIL */
+.course{
+  margin: 0 5%;
+}
+
+.course__section {
+  border-bottom: .1rem solid var(--black);
+  margin-bottom: 2rem;
+}
+
+.course__section:last-of-type {
+  border-bottom: 0;
+}
+
+.course__section--img {
+  width: 100%;
+  height: auto;
+}
+
+.course__section--label {
+  font-weight: bold;
+}
+
+.course__section--price {
+  font-weight: normal;
+}
+
+.course__section--info {
+  text-align: justify;
+}
+
+/* COURSE LAPTOP */
+@media (min-width: 1024px) {
+  .course{
+    margin: 0 10%;
+  }
+
+  .course__section--img {
+    height: 60rem;
+  }
+  .course__section {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+  }
+}
+
+/* ----->>>>> CONTACT PAGES <<<<<----- */
+
+/* CONTACT MOBIL */
+
+.contact {
+  margin: 0 5%;
+  margin-bottom: 2rem;
+}
+
+.contact__title {
+  margin-bottom: 0;
+}
+
+.contact__view--A {
+  width: 100%;
+  height: 0;
+}
+
+.contact__view--img{
+  width: 0;
+  height: 0;
+}
+
+.view__view--B {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem
+}
+
+/* CONTACT LAPTOP */
+@media (min-width: 1024px) {
+  .contact {
+    margin: 0 25%;
+  }
+
+  .contact__view--A {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact__view--img{
+    width: 100%;
+    height: auto;
+  }
+
+  .view__view--B {
+    margin: 0 10%;
+  }
+}
